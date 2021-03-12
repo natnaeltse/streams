@@ -4,11 +4,12 @@
 /node_modules
 /json-Server/node_modules
 /json-Server/package-lock.json
+/json-Server/db.json
 /twitch/node_modules
 /twitch/README.node_modules
 /twitch/package-lock.json
-/video/node_modules
-/video/package-lock.json
+/rtmpServer/node_modules
+/rtmpServer/package-lock.json
 /.pnp
 .pnp.js
 doc.js

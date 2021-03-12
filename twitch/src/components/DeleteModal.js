@@ -15,7 +15,14 @@ const DeleteModal = (props) => {
 				onClick={(e) => e.stopPropagation()}
 				className="ui modal standard visible active"
 			>
-				<div className="header">{props.header}</div>
+				<div className="header" style={{ position: "relative" }}>
+					{props.header}
+					<i
+						onClick={props.onDismiss}
+						className="close icon"
+						style={{ position: "absolute", right: "10px" }}
+					></i>
+				</div>
 				<div className="content">
 					{props.content}
 					<div>Titled: {props.title}</div>

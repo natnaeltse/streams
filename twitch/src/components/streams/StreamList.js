@@ -15,10 +15,15 @@ class StreamList extends React.Component {
 					<Link
 						to={`/streams/delete/${stream.id}`}
 						className="ui button negative"
+						onClick={(e) => e.stopPropagation()}
 					>
 						Delete
 					</Link>
-					<Link to={`/streams/edit/${stream.id}`} className="ui button primary">
+					<Link
+						to={`/streams/edit/${stream.id}`}
+						className="ui button primary"
+						onClick={(e) => e.stopPropagation()}
+					>
 						Edit
 					</Link>
 				</div>
@@ -31,7 +36,11 @@ class StreamList extends React.Component {
 				<div className="item" key={stream.id}>
 					{this.renderButton(stream)}
 					<i className="large middle aligned icon camera"></i>
-					<div className="content">{stream.title}</div>
+					<div className="content">
+						<Link to={`/streams/${stream.id}`} className="header">
+							{stream.title}
+						</Link>
+					</div>
 					<div className="description">{stream.description}</div>
 				</div>
 			);

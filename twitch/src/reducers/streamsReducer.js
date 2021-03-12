@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import {
 	GET_STREAM,
 	GET_STREAMS,
@@ -7,7 +8,7 @@ import {
 } from "../actions/actionTypes";
 import _ from "lodash";
 
-const streamsReducer = (state = {}, action) => {
+export default (state = {}, action) => {
 	switch (action.type) {
 		case GET_STREAMS:
 			return { ...state, ..._.mapKeys(action.payload, "id") };
@@ -23,5 +24,3 @@ const streamsReducer = (state = {}, action) => {
 			return state;
 	}
 };
-
-export default streamsReducer;

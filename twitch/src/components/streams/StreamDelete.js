@@ -10,7 +10,7 @@ class StreamDelete extends React.Component {
 		this.props.getStream(this.props.match.params.id);
 	}
 
-	actions = () => {
+	btnActions = () => {
 		const { id } = this.props.match.params;
 		return (
 			<React.Fragment>
@@ -41,7 +41,7 @@ class StreamDelete extends React.Component {
 				id={this.props.stream.id}
 				onDismiss={() => history.push("/")}
 				//Passing a fragment as a prop
-				actions={this.actions()}
+				actions={this.btnActions()}
 			/>
 		);
 	}
